@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="/src/css/normalize.css">
+    <link rel="stylesheet" href="/src/css/all.css?v=2">
+    <link href="/src/css/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/src/js/jquery.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <title>Felipe Garza</title>
+</head>
+
+<body>
+    <nav class="no-select">
+        <div class="container">
+            <h1 onclick="scrollSection(0)">FG</h1>
+            <ul>
+                <li onclick="scrollSection(1)">
+                    PERFIL
+                </li>
+                <li onclick="scrollSection(2)">
+                    EDUCACIÓN
+                </li>
+                <li>
+                    PORTAFOLIO
+                </li>
+                <li>
+                    <button>
+                        Resume
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header class="no-select">
+        <div class="container">
+            <div class="profile">
+                <div class="eyes-container">
+                    <img src="/src/img/avatar_eyes.svg" alt="" class="eyes" />
+                </div>
+                <div class="me-mouth">
+                    <img src="/src/img/closed_mouth.svg" id="closed-mouth">
+                    <img src="/src/img/open_mouth.svg" id="open-mouth">
+                </div>
+            </div>
+            <div class="profile-info">
+                <p>¡Hola a todos! mi nombre es</p>
+                <h1>Felipe Garza</h1>
+                <h4>Soy desarrollador de software </h4>
+                <button id="btn-mirar-mas" onclick="scrollSection(1)">Mira más de mi</button>
+
+            </div>
+        </div>
+
+    </header>
+    <section class="about-me no-select">
+        <div class="container">
+            <div class="info">
+                <b>PERFIL PROFESIONAL</b>
+                <p>
+                    Aficionado a todo lo que el desarrollo de software respecta, buscando siempre mejorar mis estándares
+                    de programación y actualizarme a las novedades tecnológicas sin dejar de lado las cualidades humanas
+                    como la inteligencia emocional y el trabajo colaborativo.</p>
+            </div>
+            <div class="photo-wraper">
+
+            </div>
+        </div>
+    </section>
+    <section class="educacion">
+        <div class="container">
+            <div class="info">
+                <b>EDUCACIÓN</b>
+                <p>
+                    Títulado con honores como Ingeniero en Sistemas Computacionales en el Instituto
+                    Tecnológico de Nuevo Laredo. <br />
+                    Atualmente cursando una maestría en Gestión de Tecnologías de la Información en Tecmilenio.
+                </p>
+            </div>
+            <div class="swiper img-wraper"
+                style="background: url(/src/img/titulacion.jpg) center center /contain no-repeat, rgb(241, 241, 241); width:100%; height:100%;">
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <div class="social-media">
+            <a href="https://www.instagram.com/fegarzas/" target="_blank">
+                <i class="fa-brands fa-instagram"></i> <a href="">
+                </a>
+                <a href="https://www.facebook.com/fegarzas/" target="_blank">
+                    <i class="fa-brands fa-facebook-square"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/fegarza/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/fegarza" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+        </div>
+
+    </footer>
+
+</html>
+
+
+<script>
+    var eyes = document.getElementsByClassName("eyes");
+    document.onmousemove = function () {
+        var x = event.clientX * 100 / window.innerWidth + '%';
+        var y = event.clientY * 100 / window.innerHeight + '%';
+
+        for (var i = 0; i < 2; i++) {
+            eyes[i].style.left = x;
+            eyes[i].style.top = y;
+            eyes[i].style.transform = "translate(-" + x + ", -" + y + ")";
+        }
+    }
+
+    function scrollDown() {
+        $("html, body").animate({ scrollTop: $(window).height() }, 600);
+    }
+
+
+    function scrollSection(sectionNumber) {
+        $("html, body").animate({ scrollTop: $(window).height() * sectionNumber }, 600);
+    }
+
+
+    $(document).ready(function () {
+        $('#btn-mirar-mas').hover(function () {
+            $('#open-mouth').css("display", "inherit");
+            $('#closed-mouth').css("display", "none");
+        }, function () {
+            $('#open-mouth').css("display", "none");
+            $('#closed-mouth').css("display", "inherit");
+        });
+
+
+    })
+
+
+</script>
