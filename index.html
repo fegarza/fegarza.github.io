@@ -54,8 +54,8 @@
             <div class="profile-info">
                 <p>¡Hola a todos! mi nombre es</p>
                 <h1>Felipe Garza</h1>
-                <h4>Soy desarrollador de software </h4>
-                <button id="btn-mirar-mas" onclick="scrollSection(1)">Mira más de mi</button>
+                <h4>Soy un ingenierio en sistemas computacionales </h4>
+                <button id="btn-mirar-mas" onclick="scrollSection(1)">Concoe más de mi</button>
             </div>
         </div>
 
@@ -65,9 +65,10 @@
             <div class="info">
                 <b>PERFIL PROFESIONAL</b>
                 <p>
-                    Aficionado a todo lo que el desarrollo de software respecta, buscando siempre mejorar mis estándares
-                    de programación y actualizarme a las novedades tecnológicas sin dejar de lado las cualidades humanas
-                    como la inteligencia emocional y el trabajo colaborativo.</p>
+                    Mi perfil profesional se centra en el desarrollo de software. Soy un apasionado de esta área y
+                    siempre busco mejorar mis estándares de programación y mantenerme actualizado con las últimas
+                    novedades tecnológicas. Además, valoro las cualidades humanas, como la inteligencia emocional y el
+                    trabajo colaborativo.</p>
             </div>
             <div class="photo-wraper">
 
@@ -79,30 +80,30 @@
             <div class="info">
                 <b>EDUCACIÓN</b>
                 <p>
-                    Títulado con honores como Ingeniero en Sistemas Computacionales en el Instituto
-                    Tecnológico de Nuevo Laredo. <br />
-                    Atualmente cursando una maestría en Gestión de Tecnologías de la Información en Tecmilenio.
+                    Me gradué con honores como Ingeniero en Sistemas Computacionales en el Instituto Tecnológico de
+                    Nuevo Laredo, donde obtuve el mejor promedio de mi generación. Actualmente, estoy cursando una
+                    maestría en Gestión de Tecnologías de la Información en Tecmilenio.
                 </p>
             </div>
-            <div class="swiper img-wraper"
-                style="background: url(/src/img/titulacion.jpg) center center /contain no-repeat, rgb(241, 241, 241); width:100%; height:100%;">
-            </div>
-
         </div>
     </section>
-    <section  class="about-me no-select">
+    <section class="about-me no-select">
         <div class="container">
-            
             <div class="info">
                 <b>Reconocimiento ANFEI</b>
                 <p>
-                Enlace reconcimiento mejores egresados del año 2021.
+                    <a href="https://www.anfei.mx/reconocimientos/egresados/?eanio=2021&epages=7&eipp=25&eorder=0&epos=0">Enlace de reconcimiento mejores egresados del año 2021.</a>
                 </p>
             </div>
             <img src="/src/img/anfei.png" style="width: 200px;" alt="">
         </div>
     </section>
-    <footer>
+    <section class="no-select">
+        <div class="container">
+            <div class="frida-slider" id="home-slider"></div>
+         </div>
+    </section>
+     <footer>
         <div class="social-media">
             <a href="https://www.instagram.com/fegarzas/" target="_blank">
                 <i class="fa-brands fa-instagram"></i> <a href="">
@@ -117,12 +118,9 @@
                     <i class="fa-brands fa-github"></i>
                 </a>
         </div>
-
     </footer>
-
 </html>
-
-
+<script src="/src/js/frida-slider.min.js"></script>
 <script>
     var eyes = document.getElementsByClassName("eyes");
     document.onmousemove = function () {
@@ -159,4 +157,19 @@
     })
 
 
+</script>
+<script>
+    loadFridaSlider({
+        classId : "home-slider",
+        time : 5000, 
+        menu : true, 
+        slides: [ 
+        {
+            src:"/src/img/titulacion.jpg"
+        },
+        {
+            src: "/src/img/reconocimiento.jpeg"
+        }
+        ]
+    });
 </script>
