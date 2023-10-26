@@ -163,7 +163,9 @@ header .container .profile {
     min-height: 200px;
     min-width: 200px;
     z-index: 10;
-    background: url(/src/img/avatar.svg) no-repeat center / contain;
+    background: url(/src/img/avatar.svg) no-repeat center / contain, var(--second-color);
+    border: 10px solid var(--second-color);
+    border-radius: 50%;
 }
 
 header .container .profile .eyes-container {
