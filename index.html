@@ -1,112 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/src/css/normalize.css">
     <link rel="stylesheet" href="/src/css/all.css?v=6">
     <link href="/src/css/carousel.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="/src/js/jquery.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link rel="icon" type="image/x-icon" href="/src//img/favicon.ico">
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/src/img/favicon.ico">
     <title>Felipe Garza</title>
 </head>
 
 <body>
     <header class="no-select">
         <div class="container">
+            <div class="profile-info">
+                <h3>Hello there, this is</h3>
+                <h1>Felipe Garza</h1>
+                <h4>Full-stack developer who loves building delightful digital experiences</h4>
+                <div class="buttons">
+                        <button id="btn-descargar" onclick="window.open('/src/files/resume.pdf','_blank')">Resume <i class="fa-solid fa-download"></i></button>
+                    <button id="btn-mirar-mas" onclick="scrollSection(1)">Watch more</button>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/fegarza/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/fegarza" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.facebook.com/fegarzas/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook-square"></i>
+                    </a>
+                </div>
+            </div>
             <div class="profile">
                 <div class="eyes-container">
-                    <img src="/src/img/avatar_eyes.svg" alt="" class="eyes" />
+                    <img src="/src/img/avatar_eyes.svg" alt="Avatar eyes" class="eyes" />
                 </div>
                 <div class="me-mouth">
-                    <img src="/src/img/closed_mouth.svg" id="closed-mouth">
-                    <img src="/src/img/open_mouth.svg" id="open-mouth">
+                    <img src="/src/img/closed_mouth.svg" id="closed-mouth" alt="Closed mouth">
+                    <img src="/src/img/open_mouth.svg" id="open-mouth" alt="Open mouth">
                 </div>
             </div>
-            <div class="profile-info">
-                <p>¡Hola a todos! mi nombre es</p>
-                <h1>Felipe Garza</h1>
-                <h4>Ingenierio en sistemas computacionales </h4>
-                <button id="btn-mirar-mas" onclick="scrollSection(1)">Conoce más de mi</button>
-            </div>
         </div>
-
     </header>
-    <section class="about-me no-select">
+    <section class="no-select about-me">
         <div class="container">
-            <div class="info">
-                <b>Perfil profesional</b>
-                <p>
-                    Mi perfil profesional se centra en el desarrollo de software. Soy un apasionado de esta área y
-                    siempre busco mejorar mis estándares de programación y mantenerme actualizado con las últimas
-                    novedades tecnológicas. Además, valoro las cualidades humanas, como la inteligencia emocional y el
-                    trabajo colaborativo.</p>
-            </div>
-            <div class="photo-wraper">
+            <img src="/src/img/me.png" class="profile-photo" alt="Profile photo of Felipe Garza" />
+            <h1>About me</h1>
+            <p>
+                I am a software developer with over five years of experience in designing, developing, and
+                implementing technological solutions in professional environments. I specialize in web and mobile
+                applications, leveraging technologies such as .NET, Python, Java, Angular, and Flutter, with a focus
+                on scalability, efficiency, and continuous improvement of systems. Passionate about adopting new
+                technologies, I contribute to high-impact projects by combining strong technical skills with
+                emotional intelligence and effective team collaboration, achieving outstanding results.</p>
+        </div>
+    </section>
+    <section class="no-select education">
+        <div class="container">
+            <h1>Education</h1>
+            <div class="card">
+                <div class="left">
+                    <div class="icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div class="line">
 
+                    </div>
+                </div>
+                <div class="right">
+                    <h1>Tecmilenio (2022, 2024)</h1>
+                    <p>Master’s Degree in Information Technology Management.</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="left">
+                    <div class="icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div class="line">
+
+                    </div>
+                </div>
+                <div class="right">
+                    <h1>ITNLD (2017, 2022)</h1>
+                    <p>Bachelor’s Degree in Computer Systems Engineer.</p>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="no-select experiencia">
+        <div class="container">
+            <h1>Experience</h1>
+            <div class="card">
+                <div class="left">
+                    <div class="icon">
+                        <i class="fa-solid fa-suitcase"></i>
+                    </div>
+                    <div class="line">
+
+                    </div>
+                </div>
+                <div class="right">
+                    <h1>ITJ (2024-Currently)</h1>
+                    <ul>
+                        <li>
+
+                            <p> Mid Java Developer at ITJ, working with Exact Sciences.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="left">
+                    <div class="icon">
+                        <i class="fa-solid fa-suitcase"></i>
+                    </div>
+                    <div class="line">
+
+                    </div>
+                </div>
+                <div class="right">
+                    <h1>Aduasis Logística (2020-2024)</h1>
+                    <ul>
+                        <li>
+                            <b>Image Compressor</b>
+
+                            <p>Optimized server storage usage, achieving a 40% reduction in space used. This improvement
+                                also enhanced image download times by 60%, benefiting the user experience in
+                                applications reliant on these resources.
+                            </p>
+                        </li>
+                        <li>
+                            <b>Mobile App for Warehouse Yard Management</b>
+
+                            <p>Implemented a synchronization system that enabled the app to function offline, reducing
+                                mobile data costs. This enhancement increased operational productivity by 30% by
+                                ensuring service continuity even in areas with limited connectivity.
+                            </p>
+                        </li>
+                        <li>
+                            <b>Document Digitizer</b>
+
+                            <p>Automated the digitization of customs documents, transforming a manual task into an
+                                automated workflow running in the background to interact with government web services.
+                                This solution streamlined the creation of electronic files, reducing processing times
+                                and significantly improving efficiency in customs procedures.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="left">
+                    <div class="icon">
+                        <i class="fa-solid fa-suitcase"></i>
+
+                    </div>
+                    <div class="line">
+
+                    </div>
+                </div>
+                <div class="right">
+                    <h1>ITNLD (2018-2020)</h1>
+                    <ul>
+                        <li>
+                            <b>Complementary Credits System</b>
+
+                            <p>Design, development, and implementation of the complementary credits system for teachers.
+                            </p>
+                        </li>
+                        <li>
+                            <b>Tutoring System</b>
+
+                            <p>Design, development, and implementation of the system for managing academic tutoring.
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
-    <section class="educacion">
+
+    <section class="recognitions no-select">
         <div class="container">
-            <div class="info">
-                <b>Educación</b>
-                <p>
-                    Me gradué con honores como Ingeniero en Sistemas Computacionales en el Instituto Tecnológico de
-                    Nuevo Laredo, donde obtuve el mejor promedio de mi generación. Actualmente, estoy cursando una
-                    maestría en Gestión de Tecnologías de la Información en Tecmilenio.
-                </p>
+            <h1>Recognitions</h1>
+            <div class="container">
+                <div class="frida-slider" id="home-slider"></div>
             </div>
         </div>
+
     </section>
-    <section class="about-me no-select">
-        <div class="container">
-            <div class="info">
-                <b>Reconocimiento ANFEI</b>
-                <p>
-                    <a href="https://www.anfei.mx/reconocimientos/egresados/?eanio=2021&epages=7&eipp=25&eorder=0&epos=0">Enlace de reconcimiento mejores egresados del año 2021.</a>
-                </p>
-            </div>
-            <img src="/src/img/anfei.png" style="width: 200px;" alt="">
-        </div>
-    </section>
-    <section class="no-select">
-        <div class="container">
-            <div class="frida-slider" id="home-slider"></div>
-         </div>
-    </section>
-     <footer>
-        <div class="social-media">
-            <a href="https://www.instagram.com/fegarzas/" target="_blank">
-                <i class="fa-brands fa-instagram"></i> <a href="">
-                </a>
-                <a href="https://www.facebook.com/fegarzas/" target="_blank">
-                    <i class="fa-brands fa-facebook-square"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/fegarza/" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/fegarza" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-        </div>
-    </footer>
-</html>
+
+    <script src="/src/js/jquery.js"></script>
 <script src="/src/js/frida-slider.min.js"></script>
 <script>
     var eyes = document.getElementsByClassName("eyes");
-    document.onmousemove = function () {
-        var x = event.clientX * 100 / window.innerWidth + '%';
-        var y = event.clientY * 100 / window.innerHeight + '%';
+    document.onmousemove = function (e) {
+        var x = e.clientX * 100 / window.innerWidth + '%';
+        var y = e.clientY * 100 / window.innerHeight + '%';
 
-        for (var i = 0; i < 2; i++) {
+        for (var i = 0; i < eyes.length; i++) {
             eyes[i].style.left = x;
             eyes[i].style.top = y;
             eyes[i].style.transform = "translate(-" + x + ", -" + y + ")";
@@ -117,11 +219,9 @@
         $("html, body").animate({ scrollTop: $(window).height() }, 600);
     }
 
-
     function scrollSection(sectionNumber) {
         $("html, body").animate({ scrollTop: $(window).height() * sectionNumber }, 600);
     }
-
 
     $(document).ready(function () {
         $('#btn-mirar-mas').hover(function () {
@@ -131,24 +231,41 @@
             $('#open-mouth').css("display", "none");
             $('#closed-mouth').css("display", "inherit");
         });
-
-
     })
-
 
 </script>
 <script>
     loadFridaSlider({
-        classId : "home-slider",
-        time : 5000, 
-        menu : true, 
-        slides: [ 
-        {
-            src:"/src/img/titulacion.jpg"
-        },
-        {
-            src: "/src/img/reconocimiento.jpeg"
-        }
+        classId: "home-slider",
+        time: 10000,
+        menu: true,
+        slides: [
+            {
+                src: "/src/slides/slide1.jpg"
+            },
+            {
+                src: "/src/slides/slide2.jpg"
+            },
+            {
+                src: "/src/slides/slide3.jpg"
+            },
+            {
+                src: "/src/slides/slide4.jpg"
+            },
+            {
+                src: "/src/slides/slide5.jpg"
+            },
+            {
+                src: "/src/slides/slide6.jpg"
+            },
+            {
+                src: "/src/slides/slide7.jpg"
+            },
+            {
+                src: "/src/slides/slide8.jpg"
+            }
         ]
     });
 </script>
+</body>
+</html>
