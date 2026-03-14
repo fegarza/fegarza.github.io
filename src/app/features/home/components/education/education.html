@@ -1,0 +1,45 @@
+<section id="education" class="w-full min-h-screen relative flex flex-col justify-center items-center py-20 px-8 xl:px-16 overflow-hidden bg-gray-50 dark:bg-[#031124] transition-colors duration-500">
+  
+  <!-- Section Header -->
+  <div #animatedItem class="z-10 text-center mb-16 opacity-0">
+    <h2 class="text-gray-900 dark:text-white text-4xl font-light tracking-tight mb-4 transition-colors duration-500">
+      Academic <span class="text-transparent bg-clip-text bg-gradient-to-r from-main to-[#1e90ff]">Education</span>
+    </h2>
+    <div class="w-24 h-1 bg-main mx-auto rounded-full shadow-[0_0_10px_rgba(69,229,162,0.8)]"></div>
+  </div>
+
+  <!-- Education Container -->
+  <div class="w-full max-w-4xl z-10 flex flex-col gap-8">
+    
+    <div *ngFor="let edu of educationList(); let i = index" #animatedItem
+         class="group bg-white dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl p-8 shadow-xl dark:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(7,30,61,0.2)] dark:hover:shadow-[0_15px_30px_-10px_rgba(69,229,162,0.2)] hover:border-main/50 dark:hover:border-main/30 hover:bg-gray-50 dark:hover:bg-white/10 relative overflow-hidden opacity-0"
+         [style.animation-delay]="(i * 0.15) + 's'">
+      
+      <!-- Subtle top glow inside card -->
+      <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-main/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div class="flex items-center gap-6">
+          <div class="p-4 bg-main/10 rounded-2xl text-main text-3xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div>
+            <h3 class="text-gray-900 dark:text-white text-2xl font-bold mb-1 transition-colors">{{ edu.institution }}</h3>
+            <h4 class="text-gray-600 dark:text-white/80 text-lg transition-colors">{{ edu.degree }}</h4>
+          </div>
+        </div>
+        
+        <div class="flex flex-col md:items-end shrink-0">
+          <span class="text-main font-bold text-lg px-4 py-2 bg-main/5 rounded-xl border border-main/10 transition-colors">
+            {{ edu.period }}
+          </span>
+        </div>
+      </div>
+
+      <p *ngIf="edu.description" class="mt-6 text-gray-600 dark:text-white/70 text-base leading-relaxed border-t border-gray-100 dark:border-white/10 pt-6 transition-colors">
+        {{ edu.description }}
+      </p>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,91 @@
+<header class="no-select w-full min-h-screen m-0 p-0 flex justify-center items-center relative overflow-hidden bg-[url('/src/img/header_bg.svg'),_linear-gradient(#031124,_#205396)] bg-[center,_center] bg-[length:cover,_cover] animate-bg-header after:content-[''] after:absolute after:inset-0 after:w-full after:h-full after:bg-black/40 after:backdrop-blur-[10px] after:z-0 xl:flex-row xl:h-full xl:p-8 xl:px-16">
+  <!-- Decorative Background Blobs -->
+  <div class="absolute top-1/4 -left-20 w-64 h-64 bg-main/20 rounded-full blur-3xl animate-pulse-slow z-0"></div>
+  <div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow z-0" style="animation-delay: 2s"></div>
+
+  <div class="container xlStyles w-full h-full absolute flex flex-col-reverse items-center justify-center max-w-[1200px] px-8 py-16 box-border xl:flex-row xl:justify-between xl:items-center xl:relative z-10">
+    <div class="profile-info z-10 flex flex-col justify-center items-center xl:items-start bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 shadow-2xl xl:bg-transparent xl:backdrop-blur-0 xl:p-0 xl:border-0 xl:shadow-none animate-fadeInUp">
+      <h3 class="text-white text-center text-[1.2rem] font-extralight p-0 m-0 xl:text-[2.2rem] opacity-0 animate-fadeInUp" style="animation-delay: 0.2s">Hello there, this is</h3>
+      <h1 class="text-transparent bg-clip-text bg-gradient-to-r from-white to-main text-[3.2rem] p-0 font-bold tracking-tight mt-[0.06em] mb-0 relative text-center whitespace-nowrap xl:text-left xl:text-[5.5rem] xl:mt-0 opacity-0 animate-fadeInUp" style="animation-delay: 0.4s">Felipe Garza</h1>
+      <h4 class="text-white/80 text-lg font-normal tracking-wide mt-2 mb-0 text-center xl:text-left xl:text-[1.6rem] opacity-0 animate-fadeInUp" style="animation-delay: 0.6s">
+        Full-stack developer who loves building <span class="text-main">delightful digital experiences</span>
+      </h4>
+      <div class="buttons flex flex-col w-full mt-8 gap-4 xl:flex-row xl:mt-8 xl:w-auto opacity-0 animate-fadeInUp" style="animation-delay: 0.8s">
+        <button
+          id="btn-descargar"
+          (click)="openResume()"
+          class="bg-main border-0 cursor-pointer text-dark text-base font-bold py-4 px-8 rounded-xl transition-all hover:scale-105 active:scale-95 flex items-center justify-center w-full xl:text-[1.4rem] xl:p-5 xl:w-[14rem] shadow-[0_0_20px_rgba(69,229,162,0.3)]"
+        >
+          Resume <i class="fa-solid fa-file-lines ml-2"></i>
+        </button>
+        <button 
+          id="btn-mirar-mas" 
+          (click)="scrollSection(1)" 
+          (mouseenter)="setMouthState(true)" 
+          (mouseleave)="setMouthState(false)"
+          class="bg-transparent border-2 border-white/30 cursor-pointer text-white text-base font-bold py-4 px-8 rounded-xl transition-all hover:bg-white hover:text-black hover:border-white flex items-center justify-center w-full xl:text-[1.4rem] xl:p-5 xl:w-[14rem]"
+        >
+          Watch more
+        </button>
+      </div>
+      <div class="social-media flex justify-center items-center gap-6 z-[200] box-border mt-8 xl:mt-10 xl:justify-start text-white w-full xl:w-auto opacity-0 animate-fadeInUp" style="animation-delay: 1s">
+        <a
+          href="https://www.linkedin.com/in/fegarza/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition-transform hover:scale-125"
+        >
+          <i class="fa-brands fa-linkedin text-[1.9rem] cursor-pointer transition-colors hover:text-main xl:text-[3.7rem]"></i>
+        </a>
+        <a
+          href="https://github.com/fegarza"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition-transform hover:scale-125"
+        >
+          <i class="fa-brands fa-github text-[1.9rem] cursor-pointer transition-colors hover:text-main xl:text-[3.7rem]"></i>
+        </a>
+      </div>
+    </div>
+    <div class="profile z-10 w-[70%] max-w-[30vh] aspect-square mb-[5vh] animate-float relative xl:ml-20 xl:max-w-[40%] xl:mb-0">
+      <!-- Glow & Border Layer (Perfect Circle) -->
+      <div class="absolute inset-[5%] rounded-full shadow-[0_0_60px_-10px_rgba(69,229,162,0.5)] border-4 border-main/20 bg-main/5 z-0"></div>
+      
+      <!-- Base Avatar (No clipping, slightly larger to pop out of the circle) -->
+      <div class="absolute inset-0 z-10 flex items-center justify-center">
+        <img src="/src/img/avatar.png" alt="Felipe Garza" class="w-full h-full object-contain scale-[1.02]">
+      </div>
+      
+      <!-- Overlay eyes and mouth (positioned relative to the base avatar) -->
+      <div class="absolute inset-0 z-20 pointer-events-none">
+        <div class="eyes-container w-[17%] h-[8%] ml-[29%] mt-[31%] relative">
+          <img
+            src="/src/img/avatar_eyes.svg"
+            alt="Avatar eyes"
+            class="eyes absolute w-[75%] left-[13%] top-[13%]"
+            [style.left]="eyeTransformX()"
+            [style.top]="eyeTransformY()"
+            [style.transform]="'translate(-' + eyeTransformX() + ', -' + eyeTransformY() + ')'"
+          />
+        </div>
+        <div class="me-mouth w-[14%] h-[10%] ml-[32%] mt-[8.5%]">
+          <img
+            src="/src/img/closed_mouth.svg"
+            id="closed-mouth"
+            alt="Closed mouth"
+            class="w-full h-full"
+            [style.display]="mouthOpen() ? 'none' : 'inherit'"
+          />
+          <img
+            src="/src/img/open_mouth.svg"
+            id="open-mouth"
+            alt="Open mouth"
+            class="w-full h-full mt-[50%] ml-[-15%]"
+            [style.display]="mouthOpen() ? 'inherit' : 'none'"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
