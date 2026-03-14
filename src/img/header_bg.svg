@@ -1,0 +1,27 @@
+<svg viewBox="0 0 2124 871" xmlns="http://www.w3.org/2000/svg" >
+    <defs>
+        <linearGradient x1="54.97%" y1="100%" x2="54.97%" y2="37.597%" id="a">
+            <stop stop-color="#152F49" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#152F49" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path class="up-normal delay-3" stroke="#47DFAA" stroke-width="15" stroke-linejoin="bevel" d="M434 720l-49-28.5 49-28.5"></path>
+        <path class="up-slow delay-1" stroke="#47DFAA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" d="M720 220l67 39-67 39"></path>
+        <path class="up-normal" stroke="#A1D3E5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" d="M1571 321l-65-37.5 65-37.5M1786 550c-48-40.06-48-113.939 0-154"></path>
+        <path class="up-fast delay-1" d="M1256 428c-48-40.06-48-113.939 0-154" stroke="#40B7FF" stroke-width="5" opacity=".75" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path class="up-normal" d="M445 136c48 40.06 48 113.939 0 154" stroke="#40B7FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path class="up-fast delay-3" d="M862 447h102" stroke="#A1D3E5" stroke-width="5" opacity=".75" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path class="up-slow delay-2" d="M1367 752h166.5" stroke="#40B7FF" stroke-width="15" opacity=".55"></path>
+        <path class="up-fast " d="M1400 50v42M1434 50v42" stroke="#47DFAA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path class="up-normal" d="M1182 4l-83 133" stroke="#47DFAA" stroke-width="15" opacity=".75" stroke-linejoin="round"></path>
+        <path class="up-fast delay-2" d="M1461 473v87M1505 517h-87M247.906 315.387l-61.519 61.519M248.613 376.906l-61.519-61.519" stroke="#47DFAA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path class="up-fast delay-1" d="M1813.36 138.433l-42.427 42.427M1813.567 180.36l-42.427-42.427" stroke="#47DFAA" stroke-width="15"></path>
+        <g opacity=".55" stroke="#40B7FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
+            <path class="up-fast delay-1" d="M940 692v87M984 736h-87"></path>
+        </g>
+        <path class="up-normal delay-3" d="M768 71h-80M749 104l-43-67M706 104l43-67" stroke="#40B7FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path class="up-fast delay-1" d="M537 462h60M537 491h60" stroke="#A1D3E5" stroke-width="15"></path>
+        <path class="up-normal delay-3" d="M1426 205c0 4.418-3.582 8-8 8s-8-3.582-8-8c0-4.419 3.582-8 8-8s8 3.581 8 8M1426 261c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8"></path>
+    </g>
+</svg>
